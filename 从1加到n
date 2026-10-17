@@ -1,0 +1,13 @@
+//for 循环
+int main()
+{
+  int n;
+  scanf("%d", &n);
+  int su = 0;
+  for (int i = 1;i <= n;i++)
+	{
+		su += i;
+	}
+	printf("%d", su);
+	return 0;
+}
