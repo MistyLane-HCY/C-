@@ -1,0 +1,22 @@
+int main(void)
+{
+	int n;
+	scanf("%d", &n);
+	int x=0;
+	int n1 = n;
+	while (n !=  0)
+	{
+		x *= 10;
+		x += n % 10;
+		n /= 10;
+	}
+	if(x==n1)
+	{
+		printf("yes");
+	}
+  else
+  {
+    printf("no");
+  }
+	return 0;
+}
