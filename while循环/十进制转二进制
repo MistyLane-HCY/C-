@@ -1,0 +1,18 @@
+int main(void)
+{
+	int n;
+	scanf("%d", &n);
+	if (n == 0)
+	{
+		printf("0");
+	}
+	int result = 0,weight=1;
+	while (n)
+	{
+		result += (n % 2) * weight;
+		n /= 2;
+		weight *= 10;
+	}
+	printf("%d", result);
+	return 0;
+}
