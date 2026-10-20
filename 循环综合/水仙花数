@@ -1,0 +1,17 @@
+int main(void)
+{
+	for (int i = 100;i < 1000;i++)
+	{
+		int n1 = i, sum = 0;
+		while (n1)
+		{
+			sum += (n1 % 10) * (n1 % 10) * (n1 % 10);
+			n1 /= 10;
+		}
+		if (sum ==i)
+		{
+			printf("%d ", i);
+		}
+	}
+	return 0;
+}
