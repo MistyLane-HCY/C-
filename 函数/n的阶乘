@@ -1,0 +1,16 @@
+int fac(int n)
+{
+	int re = 1;
+	for (int i = 1;i <= n;i++)
+	{
+		re *= i;
+	}
+	return re;
+}
+int main(void)
+{
+	int n;
+	scanf("%d", &n);
+	printf("%d", fac(n));
+	return 0;
+}
