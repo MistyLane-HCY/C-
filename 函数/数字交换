@@ -1,0 +1,11 @@
+void swap(int a, int b)
+{
+	printf("%d %d", b, a);
+}
+int main(void)
+{
+	int a, b;
+	scanf("%d %d", &a, &b);
+	swap(a, b);
+	return 0;
+}
