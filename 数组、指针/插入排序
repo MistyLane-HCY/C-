@@ -1,0 +1,46 @@
+void swap(int* a, int* b)
+{
+	int t = *a;
+	*a = *b;
+	*b = t;
+}
+
+void printArray(const int a[], int n)
+{
+	for (int i = 0;i < n;i++)
+	{
+		printf("%d", a[i]);
+	}
+	printf("\n");
+}
+void insertionsort(int a[], int n)
+{
+	for (int i = 1;i < n;i++)
+	{
+		int j = i;
+		while (j > 0 && a[j] < a[j - 1])
+		{
+			swap(&a[j], &a[j - 1]);
+			j--;
+		}
+		printf("第%d轮：", i);
+		printArray(a, n);
+	}
+}
+
+int main(void)
+{
+	int n;
+	printf("请写出数字的个数：");
+	scanf("%d", &n);
+	int arr[1000];
+	for (int i = 0;i < n;i++)
+	{
+		printf("请写出第%d个数字：", i + 1);
+		scanf("%d", &arr[i]);
+	}
+	printf("初始：");
+	printArray(arr, n);
+	insertionsort(arr, n);
+	return  0;
+}
